@@ -156,6 +156,8 @@
       var url = TELEGRAM + "?text=" + encodeURIComponent(lines.join("\n"));
       var win = null;
 
+      trackGoal("form_submit");
+
       try {
         win = window.open(url, "_blank");
         if (win) win.opener = null;
@@ -183,11 +185,26 @@
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
-  /* ---------- tel/telegram tracking hook ---------- */
-  window.dataLayer = window.dataLayer || [];
+  /* ---------- цели Метрики ---------- */
+  var METRIKA_ID = 114091692;
+
+  function trackGoal(name) {
+    try {
+      if (typeof window.ym === "function") {
+        window.ym(METRIKA_ID, "reachGoal", name);
+      }
+    } catch (err) {
+      /* Метрика не загрузилась — не мешаем пользователю */
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: name });
+  }
+
   document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
-    link.addEventListener("click", function () {
-      window.dataLayer.push({ event: "phone_click" });
-    });
+    link.addEventListener("click", function () { trackGoal("phone_click"); });
+  });
+
+  document.querySelectorAll('a[href*="t.me"]').forEach(function (link) {
+    link.addEventListener("click", function () { trackGoal("telegram_click"); });
   });
 })();

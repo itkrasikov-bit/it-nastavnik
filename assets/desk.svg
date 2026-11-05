@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Рабочее место: ноутбук с открытым занятием, блокнот с планом и чашка кофе">
+  <defs>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffefb"/>
+      <stop offset="1" stop-color="#f7f2e9"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b9762a"/>
+      <stop offset="0.5" stop-color="#c9873c"/>
+      <stop offset="1" stop-color="#a9671f"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <!-- фон -->
+  <circle cx="600" cy="390" r="325" fill="#e8f0ea"/>
+
+  <!-- стол -->
+  <rect x="60" y="636" width="1080" height="16" rx="8" fill="#dcd1c0"/>
+
+  <!-- тень под ноутбуком -->
+  <ellipse cx="600" cy="646" rx="240" ry="14" fill="#b9ae9c" opacity="0.45" filter="url(#soft)"/>
+
+  <!-- ноутбук -->
+  <g transform="translate(0 90)">
+    <rect x="398" y="228" width="404" height="274" rx="18" fill="#13201b"/>
+    <rect x="414" y="244" width="372" height="242" rx="9" fill="url(#screen)"/>
+
+    <path d="M414 253a9 9 0 0 1 9-9h354a9 9 0 0 1 9 9v23H414z" fill="#f1ece3"/>
+    <circle cx="434" cy="260" r="4" fill="#d3cabb"/>
+    <circle cx="448" cy="260" r="4" fill="#d3cabb"/>
+    <circle cx="462" cy="260" r="4" fill="#d3cabb"/>
+
+    <rect x="438" y="306" width="214" height="10" rx="5" fill="#ded7c9"/>
+    <rect x="438" y="332" width="300" height="10" rx="5" fill="#e6dfd2"/>
+    <rect x="438" y="358" width="256" height="10" rx="5" fill="#e6dfd2"/>
+    <rect x="438" y="384" width="176" height="10" rx="5" fill="#e6dfd2"/>
+
+    <rect x="438" y="424" width="128" height="34" rx="17" fill="#0f7a5a"/>
+    <path d="M456 441l7 7 13-14" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="582" y="424" width="96" height="34" rx="17" fill="none" stroke="#ddd6c8" stroke-width="2"/>
+
+    <path d="M386 500h428l40 46H346z" fill="#1b2c25"/>
+    <rect x="560" y="516" width="80" height="18" rx="6" fill="#2c3f36"/>
+  </g>
+
+  <!-- блокнот -->
+  <g transform="translate(122 410) rotate(-7)">
+    <rect x="6" y="10" width="212" height="252" rx="14" fill="#b9ae9c" opacity="0.4" filter="url(#soft)"/>
+    <rect x="0" y="0" width="212" height="252" rx="14" fill="#fffdf9" stroke="#e2ddd2" stroke-width="2"/>
+    <rect x="0" y="0" width="16" height="252" rx="8" fill="#ede6d8"/>
+    <rect x="42" y="42" width="130" height="9" rx="4.5" fill="#ded7c9"/>
+    <rect x="42" y="66" width="104" height="9" rx="4.5" fill="#e6dfd2"/>
+
+    <circle cx="46" cy="128" r="11" fill="#0f7a5a"/>
+    <path d="M41 128l4 4 7-8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="68" y="123" width="112" height="9" rx="4.5" fill="#e6dfd2"/>
+
+    <circle cx="46" cy="168" r="11" fill="#0f7a5a"/>
+    <path d="M41 168l4 4 7-8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="68" y="163" width="96" height="9" rx="4.5" fill="#e6dfd2"/>
+
+    <circle cx="46" cy="208" r="11" fill="none" stroke="#d3cabb" stroke-width="2.4"/>
+    <rect x="68" y="203" width="120" height="9" rx="4.5" fill="#e6dfd2"/>
+  </g>
+
+  <!-- чашка -->
+  <ellipse cx="918" cy="644" rx="62" ry="10" fill="#b9ae9c" opacity="0.45" filter="url(#soft)"/>
+  <path d="M872 542l18 96q30 14 60 0l18-96z" fill="url(#cup)"/>
+  <ellipse cx="920" cy="542" rx="48" ry="11" fill="#cf8a3c"/>
+  <ellipse cx="920" cy="542" rx="38" ry="8" fill="#5a3c1c" opacity="0.55"/>
+  <path d="M968 560q34 8 28 38t-34 24" fill="none" stroke="#b9762a" stroke-width="11" stroke-linecap="round"/>
+</svg>

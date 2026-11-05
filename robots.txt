@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://itkrasikov-bit.github.io/it-nastavnik/sitemap.xml
