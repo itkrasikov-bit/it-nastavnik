@@ -264,7 +264,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   width: 40px;
   height: 40px;
   border-radius: 13px;
-  background: var(--ink);
+  background: var(--accent);
   color: #f6f3ec;
   font-weight: 800;
   font-size: 1.05rem;
