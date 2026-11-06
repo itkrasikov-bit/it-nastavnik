@@ -86,6 +86,7 @@
         var value = currentPackage.toLowerCase();
         if (value.indexOf("нейросет") > -1) goalSelect.value = "Нейросети для работы";
         else if (value.indexOf("подрост") > -1) goalSelect.value = "Подростку 12–17";
+        else if (value.indexOf("подписк") > -1) goalSelect.value = "Подписка «на связи»";
       }
 
       if (form) {

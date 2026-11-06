@@ -847,6 +847,62 @@ button, input, select, textarea { font: inherit; color: inherit; }
   color: var(--muted);
 }
 
+/* ---------- подписка ---------- */
+
+.sub {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: clamp(24px, 4vw, 48px);
+  margin-top: 22px;
+  padding: clamp(24px, 3.2vw, 40px);
+  border: 1px solid rgba(15, 122, 90, 0.3);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(120deg, #eef7f2, #fbfdfb 62%);
+}
+
+.sub .kicker { color: var(--accent-dark); margin-bottom: 10px; }
+
+.sub h3 {
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  margin-bottom: 12px;
+}
+
+.sub__lead {
+  max-width: 56ch;
+  margin-bottom: 18px;
+  color: var(--ink-2);
+}
+
+.sub__aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: clamp(0px, 2vw, 26px);
+  border-left: 1px dashed var(--line-strong);
+}
+
+.sub__price {
+  margin: 0 0 6px;
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.sub__price span {
+  margin-left: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.sub__note {
+  margin: 0 0 18px;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
 /* ---------- guarantee ---------- */
 
 .guarantee {
@@ -1156,6 +1212,13 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
   .about { grid-template-columns: 1fr; }
   .formSection { grid-template-columns: 1fr; }
+  .sub { grid-template-columns: 1fr; }
+  .sub__aside {
+    padding-left: 0;
+    padding-top: 20px;
+    border-left: 0;
+    border-top: 1px dashed var(--line-strong);
+  }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .grid--3 { grid-template-columns: repeat(2, 1fr); }
   .facts { grid-template-columns: repeat(2, 1fr); }
